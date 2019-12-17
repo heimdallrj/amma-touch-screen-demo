@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanssinhala.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstamil.css);
+/* Webfont: Amma-Regular */
+
+@font-face {
+  font-family: 'Amma-Regular';
+  src: url('../fonts/amma/Amma.eot');
+  src: url('../fonts/amma/Amma.eot?#iefix') format('embedded-opentype'), url('../fonts/amma/Amma.woff') format('woff'), url('../fonts/amma/Amma.ttf') format('truetype'), url('../fonts/amma/Amma.svg#Amma-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+body {
+  font-family: 'Noto Sans Sinhala', sans-serif;
+}
+
+#textbox {
+  font-family: 'Amma-Regular';
+  font-size: 50px;
+  width: inherit;
+  height: 200px;
+  padding: 30px;
+  margin: 30px;
+	overflow: auto;
+  border: 0px solid #888;
+	outline: none;
+	resize: none;
+}
