@@ -1,0 +1,441 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0047)https://ucsc.cmb.ac.lk//ltrl/services/keyboard/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>amma - touch screen demo</title>
+    <script language="javascript" src="scripts/keyb_ta.js" type="text/javascript"></script>
+    <link type="text/css" href="styles/keyb.css" rel="Stylesheet">
+    <link rel="Stylesheet" href="styles/main.css" type="text/css">
+    <link rel="Stylesheet" href="styles/simplegrid.css" type="text/css">
+
+    <script language="javascript" type="text/javascript">
+        $('#textbox').autoResize();
+    </script>
+    <script language="javascript" type="text/javascript">
+        prevchar = '';
+    </script>
+
+</head>
+
+<body>
+    <form name="keyform" onsubmit="javascript:update()">
+
+        <div class="grid grid-pad">
+            <div class="col-12-1">
+                <textarea id="textbox" cols="30" rows="5" placeholder="Remember, be nice!" name="textbox"></textarea>
+            </div>
+        </div>
+
+        <div id="onscreenkeyboard">
+            <div class="keyboard">
+                <table class="keyBlock">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input onclick="addthis(&#39;அ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="அ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஆ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஆ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;இ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="இ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஈ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஈ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;உ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="உ">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input onclick="addthis(&#39;ஊ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஊ">
+                            </td>
+                            <td style="height: 33px">
+                                <input onclick="addthis(&#39;எ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="எ">
+                            </td>
+                            <td style="height: 33px">
+                                <input onclick="addthis(&#39;ஏ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஏ">
+                            </td>
+                            <td style="height: 33px">
+                                <input onclick="addthis(&#39;ஐ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஐ">
+                            </td>
+                            <td style="height: 33px">
+                                <input onclick="addthis(&#39;ஒ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஒ">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 33px">
+                                <input onclick="addthis(&#39;ஓ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஓ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஔ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஔ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஃ&#39;,0)" class="button buttonNormal" type="button"
+                                    value="ஃ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;க&#39;,1)" class="button buttonNormal" type="button"
+                                    value="க">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ங&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ங">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input onclick="addthis(&#39;ச&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ச">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஞ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ஞ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ட&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ட">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ண&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ண">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;த&#39;,1)" class="button buttonNormal" type="button"
+                                    value="த">
+                            </td>
+                        </tr>
+                    </tbody>
+
+            </div>
+            <div class="keyboard">
+                <table class="keyBlock">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input onclick="addthis(&#39;ந&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ந">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ப&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ப">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ம&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ம">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ய&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ய">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ர&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ர">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input onclick="addthis(&#39;ல&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ல">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;வ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="வ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ழ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ழ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ள&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ள">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ற&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ற">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input onclick="addthis(&#39;ன&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ன">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஜ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ஜ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஶ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ஶ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஷ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ஷ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;ஸ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ஸ">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input onclick="addthis(&#39;ஹ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="ஹ">
+                            </td>
+                            <td>
+                                <input onclick="addthis(&#39;க்ஷ&#39;,1)" class="button buttonNormal" type="button"
+                                    value="க்ஷ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="keyboard">
+                <table class="keyBlock">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                            <td>
+                                <input class="button buttonNormal" type="button"
+                                    value=" ">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="keyboard" id="vowelmodifiers" style="visibility: visible;">
+                <table class="keyBlock">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input id="1" class="button buttonSpecial" onclick="addthis(&#39;්&#39;, 0)"
+                                    type="button" value="ா"></td>
+                            <td>
+                                <input id="2" class="button buttonSpecial" onclick="addthis(&#39;ා&#39;, 0)"
+                                    type="button" value="ி"></td>
+
+                            <td>
+                                <input id="3" class="button buttonSpecial" onclick="addthis(&#39;ැ&#39;, 0)"
+                                    type="button" value="ீ"></td>
+                            <td>
+                                <input id="4" class="button buttonSpecial" onclick="addthis(&#39;ෑ&#39;, 0)"
+                                    type="button" value="ு"></td>
+
+                            <td>
+                                <input id="5" class="button buttonSpecial" onclick="addthis(&#39;ි&#39;, 0)"
+                                    type="button" value="ூ"></td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="6" class="button buttonSpecial" onclick="addthis(&#39;ී&#39;, 0)"
+                                    type="button" value="ெ"></td>
+
+                            <td>
+                                <input id="7" class="button buttonSpecial" onclick="addthis(&#39;ු&#39;, 0)"
+                                    type="button" value="ே"></td>
+                            <td>
+                                <input id="8" class="button buttonSpecial" onclick="addthis(&#39;ූ&#39;, 0)"
+                                    type="button" value="ை"></td>
+
+                            <td>
+                                <input id="10" class="button buttonSpecial" onclick="addthis(&#39;ෙ&#39;, 0)"
+                                    type="button" value="ொ"></td>
+                            <td>
+                                <input id="11" class="button buttonSpecial" onclick="addthis(&#39;ේ&#39;, 0)"
+                                    type="button" value="ோ"></td>
+
+                        </tr>
+                        <tr>
+
+
+                            <td>
+                                <input id="14" class="button buttonSpecial" onclick="addthis(&#39;ො&#39;, 0)"
+                                    type="button" value="ௌ"></td>
+                            <td>
+                                <input id="15" class="button buttonSpecial" 
+                                    type="button" value=""></td>
+
+                            <td>
+                                <input id="16" class="button buttonSpecial" onclick="addthis(&#39;ෞ&#39;, 0)"
+                                    type="button" value=""></td>
+                            <td>
+                                <input id="17" class="button buttonSpecial" onclick="addthis(&#39;ෟ&#39;, 0)"
+                                    type="button" value=""></td>
+
+                            <td>
+                                <input id="9" class="button buttonSpecial" onclick="addthis(&#39;ෘ&#39;, 0)"
+                                    type="button" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="12" class="button buttonSpecial" onclick="addthis(&#39;\u0DF2&#39;, 0)"
+                                    type="button" value=""></td>
+
+                            <td>
+                                <input id="13" class="button buttonSpecial" onclick="addthis(&#39;ෛ&#39;, 0)"
+                                    type="button" value=""></td>
+
+
+                            <div class="keyBlock" id="compoundchars" style="visibility: visible; float:left; ">
+                                <td>
+                                    <input id="c1" class="button buttonSpecial" onclick="addthis(&#39;්‍ර&#39;, 2)"
+                                        type="button" value=""> </td>
+
+                                </td>
+
+                                <td>
+                                    <input id="c2" class="button buttonSpecial" onclick="addthis(&#39;්‍ය&#39;, 2)"
+                                        type="button" value="">
+                                </td>
+
+                                <td>
+                                    <input id="c2" class="button buttonSpecial" onclick="addthis(&#39;්‍ය&#39;, 2)"
+                                        type="button" value="">
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <table class="keyBlock">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input onclick="location.reload();" type="button" value="REFRESH"
+                                    class="buttonControl refresh"></td>
+                            <td>
+                                <input onclick="location.reload();" type="button" value="HELP"
+                                    class="buttonControl help"></td>
+
+                            <td>
+                                <input onclick="addthis(&#39; &#39;,0)" type="button" value="SPACE"
+                                    class="buttonControl spacebar"></td>
+                            <td>
+                                <input onclick="location.reload();" type="button" value="CLEAR"
+                                    class="buttonControl clear"></td>
+                            <td>
+                                <input onclick="backspace" type="button" value="BACKSPACE"
+                                    class="buttonControl backspace"></td>
+                        </tr>
+                    </tbody>
+
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>
