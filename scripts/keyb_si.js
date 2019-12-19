@@ -2,6 +2,8 @@
 
 // Adding characters to the textbox
 function addthis(character,type){
+	triggerTextAreaChange();
+	
 	document.keyform.textbox.value = document.keyform.textbox.value + character;
 	if(type>=1)
 	{
