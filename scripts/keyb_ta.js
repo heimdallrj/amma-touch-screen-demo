@@ -2,6 +2,7 @@
 
 // Adding characters to the textbox
 function addthis(character,type){
+	console.log(":: ", character, type)
 	document.keyform.textbox.value = document.keyform.textbox.value + character;
 	if(type>=1)
 	{
