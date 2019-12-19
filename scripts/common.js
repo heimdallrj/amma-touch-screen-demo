@@ -62,6 +62,14 @@ function download() {
 };
 downloadLnk.addEventListener('click', download, false);
 
+function commandBackspace() {
+    $( "#textbox" ).val(
+        function(index, value){
+            return value.substr(0, value.length - 1);
+    });
+    draw();
+}
+
 function print() {
     var dataUrl = document.getElementById("input_canvas").toDataURL(); //attempt to save base64 string to server using this var  
     var windowContent = '<!DOCTYPE html>';
