@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <form name="keyform" onsubmit="javascript:update()">
+    <form onreset="javascript:resetSession()" name="keyform" onsubmit="javascript:update()">
 
         <div class="grid grid-pad">
             <div class="col-12-1">
@@ -31,7 +31,16 @@
 
         <canvas style="background: #ccc" id="input_canvas" width="1500" height="200"></canvas>
 
-        <a id="downloadLnk" download="amma_sample.jpg">Download image</a>
+        <div>
+            <a id="downloadLnk" download="amma_sample.jpg">Download image</a>
+            <br />
+            <button onclick="resetForm()" type="reset">Reset</button>
+            <p onclick="print()">Print</p>
+        </div>
+
+        <div>
+            <a href="si.html">Sinhala</a> | <a href="ta.html">Tamil</a>
+        </div>
 
         <div id="onscreenkeyboard">
             <div class="keyboard">
@@ -206,24 +215,13 @@
                                 <input onclick="addthis(&#39;க்ஷ&#39;,1)" class="button buttonNormal" type="button"
                                     value="க்ஷ">
                             </td>
-                            <td>
-                                <input class="button buttonNormal" type="button"
-                                    value=" ">
-                            </td>
-                            <td>
-                                <input class="button buttonNormal" type="button"
-                                    value=" ">
-                            </td>
-                            <td>
-                                <input class="button buttonNormal" type="button"
-                                    value=" ">
-                            </td>
                         </tr>
 
                     </tbody>
                 </table>
             </div>
-            <div class="keyboard">
+
+            <!-- <div class="keyboard">
                 <table class="keyBlock">
                     <tbody>
                         <tr>
@@ -317,8 +315,8 @@
                         </tr>
                     </tbody>
                 </table>
+            </div> -->
 
-            </div>
             <div class="keyboard" id="vowelmodifiers" style="visibility: visible;">
                 <table class="keyBlock">
                     <tbody>
@@ -355,59 +353,55 @@
                                     type="button" value="ை"></td>
 
                             <td>
-                                <input id="10" class="button buttonSpecial" onclick="addthis(&#39;ொ&#39;, 0)"
+                                <input id="9" class="button buttonSpecial" onclick="addthis(&#39;ொ&#39;, 0)"
                                     type="button" value="ொ"></td>
                             <td>
-                                <input id="11" class="button buttonSpecial" onclick="addthis(&#39;ோ&#39;, 0)"
+                                <input id="10" class="button buttonSpecial" onclick="addthis(&#39;ோ&#39;, 0)"
                                     type="button" value="ோ"></td>
-
                         </tr>
                         <tr>
-
-
                             <td>
-                                <input id="14" class="button buttonSpecial" onclick="addthis(&#39;ௌ&#39;, 0)"
+                                <input id="11" class="button buttonSpecial" onclick="addthis(&#39;ௌ&#39;, 0)"
                                     type="button" value="ௌ"></td>
                             <td>
-                                <input id="15" class="button buttonSpecial" 
+                                <input id="12" class="button buttonSpecial" 
                                     type="button" value=""></td>
 
                             <td>
-                                <input id="16" class="button buttonSpecial" onclick="addthis(&#39;ෞ&#39;, 0)"
+                                <input id="13" class="button buttonSpecial"
                                     type="button" value=""></td>
                             <td>
-                                <input id="17" class="button buttonSpecial" onclick="addthis(&#39;ෟ&#39;, 0)"
+                                <input id="14" class="button buttonSpecial"
                                     type="button" value=""></td>
 
                             <td>
-                                <input id="9" class="button buttonSpecial" onclick="addthis(&#39;ෘ&#39;, 0)"
+                                <input id="15" class="button buttonSpecial"
                                     type="button" value=""></td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="12" class="button buttonSpecial" onclick="addthis(&#39;\u0DF2&#39;, 0)"
+                                <input id="16" class="button buttonSpecial"
                                     type="button" value=""></td>
 
                             <td>
-                                <input id="13" class="button buttonSpecial" onclick="addthis(&#39;ෛ&#39;, 0)"
+                                <input id="17" class="button buttonSpecial"
                                     type="button" value=""></td>
 
 
                             <div class="keyBlock" id="compoundchars" style="visibility: visible; float:left; ">
                                 <td>
-                                    <input id="c1" class="button buttonSpecial" onclick="addthis(&#39;්‍ර&#39;, 2)"
+                                    <input id="c1" class="button buttonSpecial"
                                         type="button" value=""> </td>
 
                                 </td>
 
                                 <td>
-                                    <input id="c2" class="button buttonSpecial" onclick="addthis(&#39;්‍ය&#39;, 2)"
+                                    <input id="c2" class="button buttonSpecial"
                                         type="button" value="">
                                 </td>
                         </tr>
                     </tbody>
                 </table>
-
 
                 <table class="keyBlock">
                     <tbody>

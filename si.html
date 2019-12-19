@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <form name="keyform" onsubmit="javascript:update()">
+    <form onreset="javascript:resetSession()" name="keyform" onsubmit="javascript:update()">
 
         <div class="grid grid-pad">
             <div class="col-12-1">
@@ -31,7 +31,16 @@
 
         <canvas style="background: #ccc" id="input_canvas" width="1500" height="200"></canvas>
 
-        <a id="downloadLnk" download="amma_sample.jpg">Download image</a>
+        <div>
+            <a id="downloadLnk" download="amma_sample.jpg">Download image</a>
+            <br />
+            <button onclick="resetForm()" type="reset">Reset</button>
+            <p onclick="print()">Print</p>
+        </div>
+
+        <div>
+            <a href="si.html">Sinhala</a> | <a href="ta.html">Tamil</a>
+        </div>
 
         <div id="onscreenkeyboard">
             <div class="keyboard">
