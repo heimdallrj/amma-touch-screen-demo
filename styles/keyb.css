@@ -9,7 +9,7 @@
 .keyBlock {
 
 	float: left;
-
+	margin-right: 10px;
 }
 
 .button {
@@ -17,7 +17,13 @@
 	width: 80px;
   height: 80px;
 	font-size: 22px;
-	background: #eee;
+	background: white;
+	border: 1px solid 000;
+}
+
+.button:hover {
+	background: red;
+	color: white;
 }
 
 .buttonNormal {
