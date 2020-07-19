@@ -19,7 +19,7 @@
     </script>
 </head>
 
-<body>
+<body onload="window.lang = 'si'">
     <div>
         <form onreset="javascript:resetSession()" name="keyform" onsubmit="javascript:update()">
             <div class="margin-center">
@@ -28,8 +28,7 @@
                 </div>
             </div>
 
-            <canvas style="background: #ccc; position: absolute; visibility: hidden;" id="input_canvas" width="100%"
-                height="200"></canvas>
+            <canvas style="visibility: hidden; position: absolute;" id="input_canvas"></canvas>
 
             <div id="main-body">
                 <div id="onscreenkeyboard">
@@ -444,6 +443,8 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
     <script src="scripts/common.js"></script>
 </body>
 

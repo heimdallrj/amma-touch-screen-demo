@@ -4,7 +4,9 @@
   "description": "",
   "main": " ",
   "scripts": {
-    "start": "http-server ./ -p 7073 -c-1"
+    "start": "concurrently \"npm run server\" \"npm run app\"",
+    "app": "http-server ./ -p 5051 -c-1",
+    "server": "json-server --watch api.json --port 5050"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,10 @@
     "url": "https://github.com/thinkholic/amma-touch-screen-demo/issues"
   },
   "homepage": "https://github.com/thinkholic/amma-touch-screen-demo#readme",
-  "dependencies": {
-    "http-server": "^0.12.1"
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "concurrently": "^5.2.0",
+    "json-server": "^0.16.1"
   }
 }

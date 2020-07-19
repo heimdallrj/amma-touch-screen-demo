@@ -1,89 +1,88 @@
 // configs.
-var lsKey = 'amma-str';
-
+var lsKey = "amma-str";
 window.canvasDataUrl = null;
 
-$( document ).ready(function() {
-    // Read localStorage
-    var str = getFromLocalStorage();
-    if (str !== null) {
-        $( '#textbox' ).val(str);
-        draw();
-    }
+$(document).ready(function () {
+  // Read localStorage
+  var str = getFromLocalStorage();
+  if (str !== null) {
+    $("#textbox").val(str);
+    draw();
+  }
 });
 
 function triggerTextAreaChange() {
-    setTimeout(function() {
-        var str = $( '#textbox' ).val();
-        setLocalStorage(str);
-        draw();
-    }, 0)
-    
+  setTimeout(function () {
+    var str = $("#textbox").val();
+    setLocalStorage(str);
+    draw();
+  }, 0);
 }
 
 function setLocalStorage(str) {
-    window.localStorage.setItem(lsKey, str);
+  window.localStorage.setItem(lsKey, str);
 }
 
 function getFromLocalStorage() {
-    var str = window.localStorage.getItem(lsKey);
-    return str;
+  var str = window.localStorage.getItem(lsKey);
+  return str;
 }
 
 function resetSession() {
-    window.localStorage.removeItem(lsKey);
-    resetCanvas();
-    $( '#textbox' ).val('');
+  window.localStorage.removeItem(lsKey);
+  resetCanvas();
+  $("#textbox").val("අම්මා");
+  draw();
 }
 
 function draw() {
+    var text = document.getElementById("textbox").value;
     var canvas = document.getElementById("input_canvas");
+    canvas.width = window.innerWidth;
     var ctx = canvas.getContext("2d");
-    var text = document.getElementById('textbox').value;
+    ctx.font = "50px Amma-Regular";
     ctx.fillStyle = "red";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "white";
-    ctx.font = "60px Amma-Regular";
-    ctx.fillText(text, 750, 190);
-    ctx.textAlign = "center";
+    // ctx.textAlign = "center";
+    ctx.fillText(text, 10, 50);
 }
 
 function resetCanvas() {
-    var canvas = document.getElementById("input_canvas");
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  var canvas = document.getElementById("input_canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-
-function download() {
-    var canvas = document.getElementById("input_canvas");
-    window.canvasDataUrl = canvas.toDataURL('image/jpeg');
-    this.href = window.canvasDataUrl;
-};
-downloadLnk.addEventListener('click', download, false);
+// function download() {
+//   var canvas = document.getElementById("input_canvas");
+//   window.canvasDataUrl = canvas.toDataURL("image/jpeg");
+//   this.href = window.canvasDataUrl;
+// }
+// downloadLnk.addEventListener("click", download, false);
 
 function commandBackspace() {
-    $( "#textbox" ).val(
-        function(index, value){
-            return value.substr(0, value.length - 1);
-    });
-    draw();
+  $("#textbox").val(function (index, value) {
+    return value.substr(0, value.length - 1);
+  });
+  draw();
 }
 
 function print() {
-    var dataUrl = document.getElementById("input_canvas").toDataURL(); //attempt to save base64 string to server using this var  
-    var windowContent = '<!DOCTYPE html>';
-    windowContent += '<html>'
-    windowContent += '<head><title>Print canvas</title></head>';
-    windowContent += '<body>'
-    windowContent += '<img src="' + dataUrl + '">';
-    windowContent += '</body>';
-    windowContent += '</html>';
-    var printWin = window.open('','','width=340,height=260');
-    printWin.document.open();
-    printWin.document.write(windowContent);
-    printWin.document.close();
-    printWin.focus();
-    printWin.print();
-    printWin.close();
+    // var text = document.getElementById("textbox").value;
+    // postEntry(text, window.lang);
+
+    // Print
+    var canvas = document.getElementById('input_canvas');
+    var imgData = canvas.toDataURL("image/jpeg", 1.0);
+    var pdf = new jsPDF();
+
+    pdf.addImage(imgData, 'JPEG', 0, 0);
+    pdf.save("download.pdf");
+}
+
+function postEntry(text, lang) {
+    axios({
+        method: 'post',
+        url: 'http://localhost:5050/entries',
+        data: { text: text, lang: lang }
+    });
 }
