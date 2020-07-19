@@ -74,9 +74,11 @@ function print() {
     var canvas = document.getElementById('input_canvas');
     var imgData = canvas.toDataURL("image/jpeg", 1.0);
     var pdf = new jsPDF();
+    
 
     pdf.addImage(imgData, 'JPEG', 0, 0);
     pdf.save("download.pdf");
+    // pdf.autoPrint();
 }
 
 function postEntry(text, lang) {
