@@ -4,7 +4,7 @@
   "description": "",
   "main": " ",
   "scripts": {
-    "start": "http-server ./ -p 7070"
+    "start": "http-server ./ -p 7073 -c-1"
   },
   "repository": {
     "type": "git",

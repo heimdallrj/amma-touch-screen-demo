@@ -163,3 +163,22 @@ p.copyright {
   font-size: small;
   margin: 25px auto 0;
 }
+
+div.row-cols {
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img.btn-close {
+  width: 48px;
+  position: absolute;
+  right: 105px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.simplebar-scrollbar::before {
+  background-color: red;
+}
