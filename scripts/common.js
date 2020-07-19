@@ -67,8 +67,8 @@ function commandBackspace() {
 }
 
 function print() {
-    // var text = document.getElementById("textbox").value;
-    // postEntry(text, window.lang);
+    var text = document.getElementById("textbox").value;
+    postEntry(text, window.lang);
 
     // Print
     var canvas = document.getElementById('input_canvas');
